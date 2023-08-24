@@ -133,6 +133,14 @@ export default function Article(props) {
             )}
           </ArticleContentContainer>
         </WhiteContainer>
+              <WhiteContainer>
+          <ArticleContentContainer>
+            {documentToReactComponents(
+              props.data.article.relatedFormsAndContent.json,
+              rendererOptions({ locale: article.locale })
+            )}
+          </ArticleContentContainer>
+        </WhiteContainer>
       </article>
     </Layout>
   );
